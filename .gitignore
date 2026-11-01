@@ -1,0 +1,5 @@
+# Written on the server by MarcelBruckner-Business/ansible; never committed.
+.env
+*.generated.*
+# What the container stores.
+data/
