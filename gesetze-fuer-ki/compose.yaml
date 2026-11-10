@@ -8,11 +8,12 @@ services:
   gesetze-fuer-ki:
     image: ghcr.io/gesetze-fuer-ki/gesetze-fuer-ki:0.2.6
     container_name: gesetze-fuer-ki
-    # Monitored by Uptime Kuma (AutoKuma on this server reads these labels), past Caddy, over the private network from
-    # gewerbe-1; the public name is checked at Caddy there. The keyword is false until the index is built, so a server that runs but cannot search shows as down.
+    # Monitored by Uptime Kuma (AutoKuma on this server reads these labels) as a visitor reaches it, at its public address
+    # (PUBLIC_URL in .env), through DNS and the Caddy on gewerbe-1. The keyword is false until the index is built, so a
+    # server that runs but cannot search shows as down.
     labels:
-      kuma.gesetze.keyword.name: gesetze-fuer-ki (direct)
-      kuma.gesetze.keyword.url: http://${PRIVATE_IP}:8081/health
+      kuma.gesetze.keyword.name: gesetze-fuer-ki
+      kuma.gesetze.keyword.url: ${PUBLIC_URL}/health
       kuma.gesetze.keyword.keyword: '"ready":true'
       kuma.gesetze.keyword.parent_name: host-group
     restart: unless-stopped
