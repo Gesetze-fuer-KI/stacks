@@ -4,7 +4,7 @@ How [gesetze-fuer-ki.de](https://gesetze-fuer-ki.de) runs [gesetze-fuer-ki](http
 
 | Folder | What runs | Reachable |
 |---|---|---|
-| `gesetze-fuer-ki/` | The MCP server for German federal and state law, and its documentation site; `data/` is its clone of the law texts and its search index, rebuilt when deleted (about a minute) | On the server's private address only: the server's Caddy passes requests on |
+| `gesetze-fuer-ki/` | The MCP server for German federal and state law, and its documentation site; `data/` is its clone of the law texts and its search index, rebuilt when deleted (about a minute) | On the server's private address only: the Caddy on gewerbe-1 passes requests on over the private network |
 
 ## How it is used
 
