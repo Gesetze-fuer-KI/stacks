@@ -6,7 +6,7 @@
 # network (MarcelBruckner-Business/stacks, caddy/).
 services:
   gesetze-fuer-ki:
-    image: ghcr.io/gesetze-fuer-ki/gesetze-fuer-ki:0.2.6
+    image: ghcr.io/gesetze-fuer-ki/gesetze-fuer-ki:0.2.7
     container_name: gesetze-fuer-ki
     # Monitored by Uptime Kuma (AutoKuma on this server reads these labels), past Caddy, over the private network from
     # gewerbe-1; the public name is checked at Caddy there. The keyword is false until the index is built, so a server that runs but cannot search shows as down.
